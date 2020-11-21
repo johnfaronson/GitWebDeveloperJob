@@ -4,11 +4,13 @@ import menuClass from "./modules/menu"
 import scrollRevealClass from "./modules/scrollReveal"
 import stickyHeaderClass from "./modules/stickyHeader"
 import sectionHighlighterClass from "./modules/sectionHighlighter"
+import clientArea from "./modules/clientArea"
 
 //original pre-load modal Js
 //import modal from "./modules/modal";
 //new modal();
 
+new clientArea();
 new menuClass();
 new stickyHeaderClass(".large-hero");
 new scrollRevealClass(".feature-item");
