@@ -9,7 +9,7 @@ class clientArea
         this.field = document.querySelector(".client-area_input");
         this.div = document.querySelector(".client-area_content-area");
         
-        this.form.addEventListener("submit", doSubmit(event));
+        this.form.addEventListener("submit", this.doSubmit(event));
     }   
     
     injectHTML()
