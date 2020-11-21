@@ -9,7 +9,11 @@ class clientArea
         this.field = document.querySelector(".client-area_input");
         this.div = document.querySelector(".client-area_content-area");
         
-        this.form.addEventListener("submit", this.doSubmit(event));
+        this.form.addEventListener("submit", event =>
+            {
+                event.preventDefault();
+                this.sendRequest();                
+            });
     }   
     
     injectHTML()
@@ -26,12 +30,6 @@ class clientArea
   </div>
 </div>            
         `)
-    }
-    
-    doSubmit(event)
-    {
-        event.preventDefault();
-        this.sendRequest();
     }
     
     sendRequest()
