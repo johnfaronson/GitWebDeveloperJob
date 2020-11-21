@@ -5,10 +5,15 @@ import scrollRevealClass from "./modules/scrollReveal"
 import stickyHeaderClass from "./modules/stickyHeader"
 import sectionHighlighterClass from "./modules/sectionHighlighter"
 import clientArea from "./modules/clientArea"
+import React from "react"
+import reactDom from "react-dom"
+import ReactComponent from "./modules/reactComponent"
+
 
 //original pre-load modal Js
 //import modal from "./modules/modal";
 //new modal();
+reactDom.render(<ReactComponent />, document.querySelector("#react-example"));
 
 new clientArea();
 new menuClass();

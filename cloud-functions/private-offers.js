@@ -1,5 +1,11 @@
 exports.handler = function(event, context, callback)
     {
+          const headers = 
+          {
+            "Access-Control-Allow-Origin" : "*",
+            "Access-Control-Allow-Headers" : "Content-Type"
+          }
+
         const content = `
                 <h3>Welcome To Your Private Travel Offers for Today!</h3>
                 <ul>Trip to your <strong>backyard</strong></ul>
@@ -17,6 +23,7 @@ exports.handler = function(event, context, callback)
             callback(null, 
                 {
                     statusCode: 200,
+                    headers,
                     body: content
                 } )
         } else               
@@ -24,6 +31,7 @@ exports.handler = function(event, context, callback)
             callback(null, 
                 {
                     statusCode: 401,
+                    headers,
                     body: "Incorrect Password"
                 } )
         }                
