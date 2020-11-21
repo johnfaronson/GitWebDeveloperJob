@@ -42,7 +42,7 @@ class clientArea
                 this.div.innerHTML = response.data;
             } ).catch(() => 
             {
-                this.div.innerHTML = "<p class="client-area_error">Incorrect Password!</p>";
+                this.div.innerHTML = "<p class='client-area_error'>Incorrect Password!</p>";
                 this.field.value = "";
                 this.field.focus();
             });
