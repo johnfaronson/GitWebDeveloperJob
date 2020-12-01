@@ -16,7 +16,7 @@ exports.handler = function(event, context, callback)
                 <li>Trip to your <strong>backyard</strong></li>
                 <li>Trip to around the <strong>block</strong></ul>
                 </ul>
-            ` +"<p>: APPDYNAMICS_ACCOUNT_NAME" +process.env.APPDYNAMICS_ACCOUNT_NAME +"</p>"
+            ` +"<p>APPDYNAMICS_ACCOUNT_NAME: " +process.env.APPDYNAMICS_ACCOUNT_NAME +"</p>"
         
         let body;
         
