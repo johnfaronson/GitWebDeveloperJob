@@ -9,7 +9,6 @@ import React from "react"
 import reactDom from "react-dom"
 import ReactComponent from "./modules/reactComponent"
 
-
 //original pre-load modal Js
 //import modal from "./modules/modal";
 //new modal();

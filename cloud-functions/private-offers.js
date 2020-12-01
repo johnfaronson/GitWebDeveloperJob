@@ -1,3 +1,7 @@
+const tracer = require('appdynamics-lambda-tracer');
+//Initialize the tracer
+tracer.init();
+
 exports.handler = function(event, context, callback)
     {
           const headers = 
@@ -8,9 +12,12 @@ exports.handler = function(event, context, callback)
 
         const content = `
                 <h3>Welcome To Your Private Travel Offers for Today!</h3>
-                <ul>Trip to your <strong>backyard</strong></ul>
-                <ul>Trip to around the <strong>block</strong></ul>
-            `
+                <ul>
+                <li>Trip to your <strong>backyard</strong></li>
+                <li>Trip to around the <strong>block</strong></ul>
+                </ul>
+            ` +"<p>: APPDYNAMICS_ACCOUNT_NAME" +process.env.APPDYNAMICS_ACCOUNT_NAME +"</p>"
+        
         let body;
         
         if(event.body)
@@ -36,3 +43,6 @@ exports.handler = function(event, context, callback)
                 } )
         }                
     };
+    
+ //Complete the instrumentation
+tracer.mainModule(module);
